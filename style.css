@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f8f8;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  width: auto;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-weight: 200;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  color: gray;
+}
+
+img {
+  width: 80px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.header {
+  max-width: 550px;
+  margin: 50px auto;
+}
+
+.cards {
+  display: grid;
+  grid-gap: 30px;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 1200px;
+  margin: 30px auto;
+}
+
+.card {
+  background-color: #fff;
+  width: 400px;
+  height: 280px;
+  border-radius: 6px;
+  border-top: 6px solid;
+  box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  padding: 30px 40px;
+  position: relative;
+}
+
+.card.green {
+  grid-area: 2 / 1 / 4 / 2;
+  border-color: #64e1dc;
+}
+
+.card.red {
+  border-color: #e63950;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row: 1 / span 2;
+}
+
+.card.yellow {
+  border-color: #fdbf00;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row: 3 / -1;
+}
+
+.card.blue {
+  border-color: #377fd2;
+  grid-area: 2 / 3 / 4 / -1;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1220px) {
+  .header {
+    padding: 0 30px;
+  }
+
+  .cards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px auto;
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    margin: 30px;
+    width: auto;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  img {
+    width: 60px;
+  }
+
+  .header-title {
+    font-size: 0.8rem;
+  }
+
+  .cards {
+    width: auto;
+  }
+  .card {
+    width: 300px;
+    height: 200px;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+  }
+
+  .attribution {
+    font-size: 9px;
+  }
+}
